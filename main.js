@@ -8,12 +8,10 @@
     }
     class Xmen extends Mutante {
         salvarMund() {
-            console.log("Mundo salvado");
         }
     }
     class Villian extends Mutante {
         consquistarMundo() {
-            console.log("Mundo salvado");
         }
     }
     const wolverine = new Xmen('wolverine', 'logan');
@@ -21,7 +19,6 @@
     wolverine.salvarMund();
     magneto.consquistarMundo();
     const printName = (character) => {
-        console.log('Se que este name es ' + character.name);
     };
     printName(wolverine);
 })();
@@ -59,5 +56,25 @@
     }
     const wolverine = new Xmen("Wolverine", "Logan", true);
     wolverine.getFullNameDesdeXmen();
+})();
+(() => {
+    class Apocalipsis {
+        constructor(name) {
+            this.name = name;
+        }
+        static getApocalipsis() {
+            if (!this.instanceApocalipsis) {
+                this.instanceApocalipsis = new Apocalipsis('Soy apocalipsis unico');
+            }
+            return this.instanceApocalipsis;
+        }
+        changeName(newName) {
+            this.name = "newOne";
+        }
+    }
+    const apocalipsis = Apocalipsis.getApocalipsis();
+    const apocalipsis2 = Apocalipsis.getApocalipsis();
+    apocalipsis2.changeName('Pa saber');
+    console.log(apocalipsis);
 })();
 //# sourceMappingURL=main.js.map
