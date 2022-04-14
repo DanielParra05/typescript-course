@@ -15,4 +15,15 @@
         }
     };
 })();
+(() => {
+    const client = {
+        name: 'Daniel',
+        age: 23,
+        adress: {
+            id: 125,
+            zip: 'GTR 456',
+            city: 'Bogota'
+        }
+    };
+})();
 //# sourceMappingURL=main.js.map
